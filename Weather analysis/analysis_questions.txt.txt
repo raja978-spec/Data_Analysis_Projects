@@ -1,0 +1,33 @@
+🔍 General Overview
+What is the average temperature across all days in the dataset?
+
+Which month has the highest average temperature?
+
+How does humidity vary across different seasons or months?
+
+What is the range of wind speed observed in the dataset?
+
+Are there any missing or anomalous values in the dataset?
+
+📊 Time-based Trends
+What is the trend of temperature over time (daily, monthly, yearly)?
+
+Is there a noticeable pattern in precipitation or rainfall across different months?
+
+How do temperature and humidity fluctuate daily or seasonally?
+
+Which time of year experiences the most extreme weather conditions (e.g., hottest, coldest, windiest days)?
+
+📈 Correlations & Relationships
+Is there a correlation between temperature and humidity?
+
+Does higher wind speed usually correspond to lower or higher temperatures?
+
+How does cloud cover relate to temperature and precipitation?
+
+📍 Extreme Weather
+What are the top 10 hottest and coldest days in the dataset?
+
+On which days did it rain or snow the most?
+
+How frequently do extreme weather events (like high wind or high rainfall) occur?
