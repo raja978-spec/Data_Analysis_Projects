@@ -1,7 +1,7 @@
 🔍 General Overview
 What is the average temperature across all days in the dataset?
 
-Which month has the highest average temperature?
+Which month has the highest average temperature? July
 
 How does humidity vary across different seasons or months?
 
