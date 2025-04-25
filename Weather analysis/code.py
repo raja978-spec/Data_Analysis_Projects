@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 df = pd.read_csv('C:/Users/ADMIN/Documents/Data analysis project/Weather analysis/dataset/Weather_Dataset.csv')
 
@@ -98,18 +99,35 @@ print(df['Months'].value_counts().keys().to_list())
 # print(df['Year'].value_counts())
 
 
-axes, fig = plt.subplots(4,3, figsize=(12,10))
-
+temp_mean_by_months = {}
 for i in df['Months'].value_counts().keys().to_list():
-    Jan = df[df['Months']==i]
-    Date = Jan['Date']
-    plt.title(label=f'{i} month analysis')
-    sns.scatterplot(data=Jan,x='Date',
-            y='Temp_C',hue='Temp_C')
-    plt.xticks(rotation=45, ha='left') 
-    plt.tight_layout(pad=2.0)
-    plt.show()
+    curren_month= df[df['Months']==i]
+    temp_mean_by_months[i] =curren_month['Temp_C'].mean()
 
+
+colors = np.random.randint(50,100,size=len(temp_mean_by_months))
+plt.title(label='Mean of Temparature analysis by month')
+plt.xlabel(xlabel='Month')
+plt.ylabel(ylabel='Mean')
+
+plt.plot(temp_mean_by_months.keys(),temp_mean_by_months.values(),
+         marker='d',
+         mfc='red',
+         c='gold',
+         mec='pink'
+         )
+plt.scatter(temp_mean_by_months.keys(), 
+            temp_mean_by_months.values(),
+            cmap='viridis',
+            s= [
+                i*30
+                for i in temp_mean_by_months.values()
+                ],
+            c=colors,
+            alpha=0.5
+            )
+plt.show()    
+   
 
 
 
